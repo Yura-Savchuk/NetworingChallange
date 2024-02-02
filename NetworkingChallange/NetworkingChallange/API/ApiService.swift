@@ -13,7 +13,7 @@ final class ApiService: NSObject {
     
     private static let baseUrl = "https://api.github.com"
     private lazy var urlSession: URLSession = {
-        .init(configuration: .default, delegate: nil, delegateQueue: nil)
+        .init(configuration: .default)
     }()
     
     override init() {
@@ -48,41 +48,6 @@ final class ApiService: NSObject {
             }
             .mapError { $0 as? ApiService.ApiError ?? .httpFailed(0) }
             .eraseToAnyPublisher()
-    }
-}
-
-extension ApiService: URLSessionDelegate {
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge) async -> (URLSession.AuthChallengeDisposition, URLCredential?) {
-        if let trust = challenge.protectionSpace.serverTrust,
-                SecTrustGetCertificateCount(trust) > 0 {
-            if let certificates = SecTrustCopyCertificateChain(trust) {
-                let certificatesData = (certificates as? [SecCertificate] ?? [])
-                    .map { SecCertificateCopyData($0) as Data }
-               
-                if trustedCertificates.intersection(Set(certificatesData)).count > 0 {
-                   return (.useCredential, URLCredential(trust: trust))
-               }
-             }
-
-           }
-        return (.cancelAuthenticationChallenge, nil)
-    }
-    
-    var trustedCertificates: Set<Data> {
-        guard let url = Bundle.main.url(forResource: "mockAPI", withExtension: "der") else {
-            print("Unable to locate SSL certificate")
-            return []
-        }
-        do {
-            return [try Data(contentsOf: url)]
-        } catch {
-            print("Unable to read SSL certificate")
-            return []
-        }
-    }
-    
-    enum SSLCertificateError: Error {
-        case unableToLocateCertifcate
     }
 }
 
