@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E22CAE3-5201-49FA-BEC3-6E3A3A70C5A8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F34292EF-95C6-41DC-A4A9-095B2345FE30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkingChallange/API/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F34292EF-95C6-41DC-A4A9-095B2345FE30 - 9420b01cf134e738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; &#x3c4;_0_0 in NetworkingChallange.ApiService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(NetworkingChallange.ApiRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, NetworkingChallange.ApiService.ApiError&gt;"
+                  moduleName = "NetworkingChallange"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriisavchuk/Desktop/NetworkingChallange/NetworkingChallange/API/ApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1448">
+               </Location>
+               <Location
+                  uuid = "F34292EF-95C6-41DC-A4A9-095B2345FE30 - 548d8e62a01768f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; &#x3c4;_0_0 in NetworkingChallangeTests.ApiService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(NetworkingChallangeTests.ApiRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, NetworkingChallangeTests.ApiService.ApiError&gt;"
+                  moduleName = "NetworkingChallangeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriisavchuk/Desktop/NetworkingChallange/NetworkingChallange/API/ApiService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
